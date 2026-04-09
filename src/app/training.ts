@@ -50,7 +50,7 @@ const users: IUser[] = [
   }
 ];
 
-const eligibleUsers: IUser[] = users.filter(user => user.age > 25);
+const eligibleUsers: IUser[] = users.filter((user: IUser) => user.age > 25);
 console.log('Пользователи старше 25:', eligibleUsers );
 
 interface IKid extends IUser {
@@ -62,11 +62,11 @@ let uploadStatus: "loading" | "success" | "error";
 
 type TextFormat = 'uppercase' | 'lowercase' | 'capitalize';
 
-function calc(a: number, b: number): number{
+function calc(a: number, b: number): number {
   return a + b;
-}
+};
 
-calc(1, 2)
+calc(1, 2);
 
 function formatText(text: string, format: TextFormat): string {
   switch(format) {
